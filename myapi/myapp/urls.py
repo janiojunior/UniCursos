@@ -7,4 +7,7 @@ urlpatterns = [
 
     url(r'^alunos/$', views.AlunoList.as_view(), name='aluno-list'),
     url(r'^aluno/(?P<pk>[0-9]+)/$', views.AlunoDetail.as_view(), name='aluno-detail'),
+
+    url(r'^disciplinas/$', views.DisciplinaList.as_view(), name='disciplina-list'),
+    url(r'^disciplina/(?P<pk>[0-9]+)/$', views.DisciplinaDetail.as_view(), name='disciplina-detail'),
 ]
