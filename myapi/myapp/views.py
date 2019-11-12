@@ -1,7 +1,7 @@
 from rest_framework import generics
 
 from .models import Curso, Aluno, Disciplina
-from .serializers import CursoSerializer, AlunoSerializer, DisciplinaSerializer
+from .serializers import CursoSerializer, CursoSerializerDetail, AlunoSerializer, AlunoSerializerDetail, DisciplinaSerializer
 
 
 # Create your views here.
@@ -12,7 +12,7 @@ class CursoList(generics.ListCreateAPIView):
 
 class CursoDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Curso.objects.all()
-    serializer_class = CursoSerializer
+    serializer_class = CursoSerializerDetail
 
 #----------Aluno-----------------
 class AlunoList(generics.ListCreateAPIView):
@@ -22,7 +22,7 @@ class AlunoList(generics.ListCreateAPIView):
 
 class AlunoDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Aluno.objects.all()
-    serializer_class = AlunoSerializer
+    serializer_class = AlunoSerializerDetail
 
 #----------Discplina-----------------
 class DisciplinaList(generics.ListCreateAPIView):
